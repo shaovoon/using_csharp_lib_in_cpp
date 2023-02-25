@@ -1,5 +1,4 @@
-# using_csharp_lib_in_cpp
-Example of Using C# Library in MFC/C++ Project
+# Example of Using C# Library in MFC/C++ Project
 
 For simplicity, we are going to use this C# class below in our C++ project.
 
