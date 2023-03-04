@@ -34,6 +34,7 @@ BEGIN_MESSAGE_MAP(CMFCwithCSharpDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BTN_ADD, &CMFCwithCSharpDlg::OnBnClickedBtnAdd)
+	ON_BN_CLICKED(IDC_BTN_ADD_LIST, &CMFCwithCSharpDlg::OnBnClickedBtnAddList)
 END_MESSAGE_MAP()
 
 
@@ -93,6 +94,24 @@ void CMFCwithCSharpDlg::OnBnClickedBtnAdd()
 {
 	CSharp::CSharpMath^ mathClass = gcnew CSharp::CSharpMath();
 	int result = mathClass->Add(2, 6);
+
+	char buf[200];
+	sprintf_s(buf, "result: %d", result);
+	MessageBoxA(GetSafeHwnd(), buf, "Message", MB_OK);
+}
+
+
+void CMFCwithCSharpDlg::OnBnClickedBtnAddList()
+{
+	CSharp::CSharpMath^ mathClass = gcnew CSharp::CSharpMath();
+
+	System::Collections::Generic::List<int>^ myList = gcnew System::Collections::Generic::List<int>();
+
+	myList->Add(1);
+	myList->Add(2);
+	myList->Add(3);
+
+	int result = mathClass->AddList(myList);
 
 	char buf[200];
 	sprintf_s(buf, "result: %d", result);
