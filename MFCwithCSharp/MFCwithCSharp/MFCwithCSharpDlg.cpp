@@ -96,8 +96,8 @@ void CMFCwithCSharpDlg::OnBnClickedBtnAdd()
 	int result = mathClass->Add(2, 6);
 
 	char buf[200];
-	sprintf_s(buf, "result: %d", result);
-	MessageBoxA(GetSafeHwnd(), buf, "Message", MB_OK);
+	sprintf_s(buf, "Add result: %d", result);
+	MessageBoxA(GetSafeHwnd(), buf, "Add", MB_OK);
 }
 
 
@@ -114,6 +114,6 @@ void CMFCwithCSharpDlg::OnBnClickedBtnAddList()
 	int result = mathClass->AddList(myList);
 
 	char buf[200];
-	sprintf_s(buf, "result: %d", result);
-	MessageBoxA(GetSafeHwnd(), buf, "Message", MB_OK);
+	sprintf_s(buf, "Add List result: %d", result);
+	MessageBoxA(GetSafeHwnd(), buf, "Add List", MB_OK);
 }
