@@ -91,19 +91,19 @@ You can use .NET Base Class Library (BCL) such as `List` class. Replace the dots
 ```Cpp
 void CMFCwithCSharpDlg::OnBnClickedBtnAddList()
 {
-	CSharp::CSharpMath^ mathClass = gcnew CSharp::CSharpMath();
+    CSharp::CSharpMath^ mathClass = gcnew CSharp::CSharpMath();
 
-	System::Collections::Generic::List<int>^ myList = gcnew System::Collections::Generic::List<int>();
+    System::Collections::Generic::List<int>^ myList = gcnew System::Collections::Generic::List<int>();
 
-	myList->Add(1);
-	myList->Add(2);
-	myList->Add(3);
+    myList->Add(1);
+    myList->Add(2);
+    myList->Add(3);
 
-	int result = mathClass->AddList(myList);
+    int result = mathClass->AddList(myList);
 
-	char buf[200];
-	sprintf_s(buf, "Add List result: %d", result);
-	MessageBoxA(GetSafeHwnd(), buf, "Add List", MB_OK);
+    char buf[200];
+    sprintf_s(buf, "Add List result: %d", result);
+    MessageBoxA(GetSafeHwnd(), buf, "Add List", MB_OK);
 }
 ```
 
