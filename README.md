@@ -1,6 +1,6 @@
-# Example of Using C# Library in MFC/C++ Project via C++/CLI
+# Using C# Library in MFC/C++ Project via C++/CLI
 
-This article serves as an reference to using your .NET C# library in a native C++ project via C++/CLI. It is initially written to answer a question on CodeProject's QnA. Your C++ project does not have to be MFC in order to follow the steps described here; it can be console or other types where you can ignore step 7 to add buttons to MFC dialog because it does not apply to your C++ project type. **Note:** This example does not cover hosting C# UI element in C++ UI; That is a complex topic on its own.
+This article serves as an reference to using your .NET C# library in a native C++ project via C++/CLI in Visual Studio 2022. You can follow even if you are using earlier Visual Studio because the steps are mostly the same. It is initially written to answer a question on CodeProject's QnA. Your C++ project does not have to be MFC in order to follow the steps described here; it can be console or other types where you can ignore step 7 to add buttons to MFC dialog because it does not apply to your C++ project type. **Note:** This example does not cover hosting C# UI element in C++ UI; That is a complex topic on its own.
 
 **Note:** The code does not build out of the box: you have to follow step 6 to amend the absolute C# dll path given to the `/AI` switch
 
