@@ -2,8 +2,6 @@
 
 This article serves as a reference to using your .NET C# library in a native C++ project via C++/CLI in Visual Studio 2022. You can follow even if you are using earlier Visual Studio because the steps are mostly the same. It is initially written to answer a question on CodeProject's QnA. Your C++ project does not have to be MFC to follow the steps described here; it can be console or other types where you can ignore step 7 to add buttons to MFC dialog because it does not apply to your C++ project type. **Note:** This example does not cover hosting C# UI element in C++ UI; That is a complex topic.
 
-**Note:** The C++ project sample does not build successfully out of the box: you have to follow step 6 to amend the absolute C# dll path given to the `/AI` switch.
-
 For simplicity, we are going to use this simple C# class with `Add` and `AddList` methods in our C++ project.
 
 ```csharp
@@ -58,7 +56,12 @@ Check the C# project for the build dependency.
 
 ![05_config_mgr](img/05_config_mgr.png)
 
-**Step 6:** Close the Configuration Manager. Next, we add the `/AI` switch to the C++ compiler. `/AI` switch tells the C++ compiler where to find your C# dll. Do not use my path here because it will be certainly different from yours. You must enter 4 different paths for Debug x86, Debug x64, Release x86 and Release x64.
+**Step 6:** Close the Configuration Manager. Next, we add the `/AI` switch to the C++ compiler. `/AI` switch tells the C++ compiler where to find your C# dll. You must enter 4 different paths for Debug x86, Debug x64, Release x86 and Release x64. The paths can be relative. See below.
+
+* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x86\Debug"
+* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x64\Debug" 
+* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x86\Release" 
+* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x64\Release" 
 
 ![06_ai_switch](img/06_ai_switch.png)
 
@@ -107,6 +110,6 @@ void CMFCwithCSharpDlg::OnBnClickedBtnAddList()
 }
 ```
 
-Build your C++ project and the C# project automatically builds first because of the build dependency set in step 4. Click the "Add" or "Add List" button. Make sure it does not crash and the result is correct.
+Build your C++ project and the C# project automatically builds first because of the build dependency set in step 4. Click the "Add" or "Add List" button. Make sure it does not crash and the result is correct. If you encounter the error of "C# dll cannot be found" on customer computer, you need to copy the C# dll to the C++ executable folder.
 
 That's all for the example. Hopefully, you can use your C# library in your C++ project. Your next step is to master C++/CLI.
