@@ -58,10 +58,10 @@ Check the C# project for the build dependency.
 
 **Step 6:** Close the Configuration Manager. Next, we add the `/AI` switch to the C++ compiler. `/AI` switch tells the C++ compiler where to find your C# dll. You must enter 4 different paths for Debug x86, Debug x64, Release x86 and Release x64. The paths can be relative. See below.
 
-* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x86\Debug"
-* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x64\Debug" 
-* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x86\Release" 
-* /AI "..\..\MFCwithCSharp\CSharpClass\bin\x64\Release" 
+* /AI "..\\..\MFCwithCSharp\CSharpClass\bin\x86\Debug"
+* /AI "..\\..\MFCwithCSharp\CSharpClass\bin\x64\Debug" 
+* /AI "..\\..\MFCwithCSharp\CSharpClass\bin\x86\Release" 
+* /AI "..\\..\MFCwithCSharp\CSharpClass\bin\x64\Release" 
 
 ![06_ai_switch](img/06_ai_switch.png)
 
